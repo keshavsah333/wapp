@@ -1,0 +1,6 @@
+{
+  "name": "Keshav Sah Portfolio Hero",
+  "description": "An interactive, visually stunning personal portfolio hero page for Keshav Sah, showing skills in AI, Graphic Design, and modern development with stats and contact capabilities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
