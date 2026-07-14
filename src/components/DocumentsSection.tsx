@@ -59,6 +59,18 @@ const DOCUMENTS_DATA: DocumentItem[] = [
     tags: ['Ch-1', 'Drive', 'BCA Hons']
   },
   {
+    id: 'govt-job',
+    name: 'Govt Job',
+    category: 'Professional',
+    description: 'Curated digital workspace and learning repository containing preparation notes, study guides, exam schedules, and reference material for government service examinations.',
+    fileType: 'Google Drive Folder',
+    fileSize: 'Cloud Access',
+    icon: FolderOpen,
+    url: 'https://drive.google.com/drive/folders/1btqR-KLdNmZfx2CvJA1uINoSDYjxngHc?usp=sharing',
+    ctaText: 'Open Folder',
+    tags: ['Govt Job', 'Study Prep', 'Drive']
+  },
+  {
     id: 'bca-transcript',
     name: 'BCA (Hons.) Academic Verification',
     category: 'Academic',
@@ -329,12 +341,12 @@ function DocumentCard({ doc, index, downloading, viewing, onAction, onDownload }
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95 }}
-      whileHover={{ y: -6 }}
+      whileHover={{ y: -6, scale: 1.025 }}
       transition={{ type: 'spring', stiffness: 200, damping: 18 }}
       style={{
         transform: isHovered 
-          ? `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)` 
-          : 'perspective(1000px) rotateX(0deg) rotateY(0deg)',
+          ? `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) scale(1.025)` 
+          : 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)',
         transformStyle: 'preserve-3d',
       }}
       className="relative rounded-3xl overflow-hidden p-6 flex flex-col justify-between min-h-[290px] select-none cursor-pointer duration-300 bg-white/40 dark:bg-neutral-900/40 backdrop-blur-md border border-neutral-200/50 dark:border-neutral-800/50 hover:border-brand-yellow/60 dark:hover:border-brand-yellow/40 hover:shadow-2xl hover:shadow-brand-yellow/5"

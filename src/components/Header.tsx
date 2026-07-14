@@ -12,20 +12,15 @@ interface HeaderProps {
   onToggleTheme: () => void;
 }
 
-const Path = (props: any) => {
-  const { d = 'M 0 0', ...rest } = props;
-
-  return (
-    <motion.path
-      fill="transparent"
-      strokeWidth="2.5"
-      stroke="currentColor"
-      strokeLinecap="round"
-      d={d}
-      {...rest}
-    />
-  );
-};
+const Path = (props: any) => (
+  <motion.path
+    fill="transparent"
+    strokeWidth="2.5"
+    stroke="currentColor"
+    strokeLinecap="round"
+    {...props}
+  />
+);
 
 export default function Header({
   currentSection,
